@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DASHBOARD</title>
+</head>
+<body class="text-gray-800 font-poppins bg-gray-200">
+
+<!--start: sidebar-->
+<div class="fixed left-0 top-0 h-full bg-[#A74227] group transition-all duration-300 w-16 hover:w-64">
+    <div class="flex flex-col h-full">
+        <a href="#" class="flex items-center p-4 border-b border-b-white">
+            <img src="https://via.placeholder.com/32" alt="placeholder" class="w-8 h-8 rounded object-cover">
+            <span class="ml-3 text-lg font-poppins text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Logo
+            </span>
+        </a>
+        <ul class="flex flex-col mt-4 space-y-2">
+            <li>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                    <i class="ri-home-office-line text-xl"></i>
+                    <span class="ml-3 text-sm font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                    <i class="ri-layout-grid-fill text-xl"></i>
+                    <span class="ml-3 text-sm font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                        Rooms
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                    <i class="ri-calendar-fill text-xl"></i>
+                    <span class="ml-3 text-sm font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                        Schedule
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                    <i class="ri-file-text-fill text-xl"></i>
+                    <span class="ml-3 text-sm font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                        Logs
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!--end: sidebar-->
+
+<!--start: header-->
+<div class="ml-16 bg-white shadow p-4 flex justify-between items-center">
+    <!-- Dashboard Title -->
+    <h1 class="text-xl font-bold text-orange-700">Dashboard</h1>
+    <!-- Date and Time -->
+    <div id="dateTime" class="text-lg text-gray-700 font-medium"></div>
+</div>
+<!--end: header-->
+
+<!--start: content-->
+<div class="ml-16 p-6 grid grid-cols-3 gap-6">
+    <!-- Room Section -->
+    <div class="bg-white rounded-lg shadow-md p-6 col-span-2">
+        <div class="flex justify-between items-center pb-4">
+            <h2 class="text-lg font-bold text-orange-700">Rooms</h2>
+            <span class="text-sm text-gray-500">Select area to view room details</span>
+        </div>
+        <div class="grid grid-cols-5 gap-2">
+            <button class="bg-green-200 text-green-800 text-sm font-medium py-2 rounded-lg border border-green-400 hover:bg-green-300 transition" onclick="updateRoomDetails('300')">300</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('316')">316</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('315')">315</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('314')">314</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('313')">313</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('312')">312</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('311')">311</button>
+            <button class="bg-red-200 text-red-800 text-sm font-medium py-2 rounded-lg border border-red-400 hover:bg-red-300 transition" onclick="updateRoomDetails('310')">310</button>
+        </div>
+        <div class="flex items-center gap-4 mt-4">
+            <div class="flex items-center gap-2">
+                <span class="w-4 h-4 bg-green-200 rounded"></span>
+                <span class="text-sm text-gray-700">Vacant</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-4 h-4 bg-red-200 rounded"></span>
+                <span class="text-sm text-gray-700">Occupied</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Status Section -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+        <h2 class="text-lg font-bold text-orange-700 pb-4">Room Status</h2>
+        <div id="roomStatus" class="space-y-2 text-gray-700">
+            <p>Status: <span id="roomStatusValue" class="font-semibold text-gray-700">Please select a room</span></p>
+            <p>Type: <span id="roomTypeValue" class="font-semibold">-</span></p>
+            <p>Section: <span id="roomSectionValue" class="font-semibold">-</span></p>
+            <p>Population: <span id="roomPopulationValue" class="font-semibold">-</span></p>
+            <p>Instructor: <span id="roomInstructorValue" class="font-semibold">-</span></p>
+            <p>Subject: <span id="roomSubjectValue" class="font-semibold">-</span></p>
+        </div>
+    </div>
+
+    <!-- Room Schedule Section -->
+    <div class="bg-white rounded-lg shadow-md p-6 col-span-3">
+        <h2 class="text-lg font-bold text-orange-700">Room Schedule</h2>
+        <!-- Example schedule table here -->
+    </div>
+</div>
+
+<script>
+    // Function to update date and time dynamically
+    function updateDateTime() {
+        const dateTimeElement = document.getElementById("dateTime");
+        const now = new Date();
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+        dateTimeElement.textContent = now.toLocaleDateString('en-US', options);
+    }
+    setInterval(updateDateTime, 1000); // Update every second
+
+    // Room details update logic
+    function updateRoomDetails(roomNumber) {
+        const roomData = {
+            "300": {
+                status: "VACANT",
+                type: "Lecture Room",
+                section: "None",
+                population: 0,
+                instructor: "None",
+                subject: "None"
+            },
+            "315": {
+                status: "OCCUPIED",
+                type: "Computer Laboratory",
+                section: "BSCpE 4-4",
+                population: 45,
+                instructor: "Engr. Mahaguay",
+                subject: "CMPE 30224 – CAO"
+            },
+            "316": {
+                status: "OCCUPIED",
+                type: "Computer Lecture Room",
+                section: "BSCpE 4-2",
+                population: 45,
+                instructor: "Engr. Rodriguez",
+                subject: "CMPE 30224 – Discrete Mathematics"
+            }
+        };
+
+        const room = roomData[roomNumber];
+
+        const statusElement = document.getElementById("roomStatusValue");
+        statusElement.textContent = room.status;
+        statusElement.style.color = room.status === "OCCUPIED" ? "red" : "green";
+
+        document.getElementById("roomTypeValue").textContent = room.type;
+        document.getElementById("roomSectionValue").textContent = room.section;
+        document.getElementById("roomPopulationValue").textContent = room.population;
+        document.getElementById("roomInstructorValue").textContent = room.instructor;
+        document.getElementById("roomSubjectValue").textContent = room.subject;
+    }
+</script>
+
+</body>
+</html>
