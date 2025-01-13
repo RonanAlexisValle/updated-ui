@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="flex">
+
+        <!-- Sidebar -->
+        <div class="fixed h-full bg-orange-600 group transition-all duration-300 w-16 hover:w-64">
+            <div class="flex flex-col h-full">
+                <a href="#" class="flex items-center p-4 border-b border-b-white">
+                    <img src="https://via.placeholder.com/32" alt="placeholder" class="w-8 h-8 rounded object-cover">
+                    <span class="ml-3 text-lg font-poppins text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Logo
+                    </span>
+                </a>
+                <ul class="flex flex-col mt-4 space-y-2">
+                    <li>
+                        <a href="Main.html" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-home text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Room.html" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-th-large text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Rooms
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Schedule.htm" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-calendar-alt text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Schedule
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Logs.html" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Logs
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 ml-16 p-6">
+
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-3xl text-orange-600 font-bold">Dashboard</h1>
+                <div id="currentDate" class="text-orange-600 text-lg"></div>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-search text-orange-600 text-2xl"></i>
+                    <i class="fas fa-bell text-orange-600 text-2xl"></i>
+                </div>
+            </div>
+            
+             <!-- Script for time -->
+            <script>
+                // JavaScript to dynamically set the date
+                const currentDate = new Date();
+                const options = { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' };
+                document.getElementById("currentDate").textContent = currentDate.toLocaleDateString('en-US', options);
+            </script>
+
+            <!-- Content -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- Rooms -->
+                <div class="bg-white p-1 rounded-lg shadow-lg col-span-2">
+                    <h2 class="text-lg font-semibold mb-4 ml-2">Rooms</h2>
+                    <div class="flex justify-center mb-4"> 
+                        <div class="grid grid-cols-9 grid-rows-6 gap-0 bg-gray-100">
+                            <div class="col-span-2 row-span-2 col-start-3 row-start-3 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-span-2 row-span-2 col-start-6 row-start-3 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-1 row-start-1 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <button class="col-start-2 row-start-1 bg-red-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="316">316</button>
+                            <button class="col-start-3 row-start-1 bg-green-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="315">315</button>
+                            <button class="col-start-4 row-start-1 bg-green-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="314">314</button>
+                            <button class="col-start-5 row-start-1 bg-red-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="313">313</button>
+                            <button class="col-start-6 row-start-1 bg-red-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="312">312</button>
+                            <button class="col-start-7 row-start-1 bg-red-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="311">311</button>
+                            <button class="col-start-8 row-start-1 bg-green-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="310">310</button>
+                            <div class="col-start-9 row-start-1 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-9 row-start-2 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-9 row-start-3 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-9 row-start-4 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-9 row-start-5 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-9 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-8 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-7 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-6 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-5 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-4 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-3 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-2 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-1 row-start-6 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-1 row-start-5 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <div class="col-start-1 row-start-4 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                            <button class="col-start-1 row-start-3 bg-green-500 outline outline-2 outline-orange-400 text-white text-center p-2 px-5" data-room-id="300">300</button>
+                            <div class="col-start-1 row-start-2 bg-white outline outline-2 outline-orange-400 p-2 px-5 "></div>
+                        </div>
+                    </div>
+                    <div class="text-center text-sm text-gray-500">Select area to view room details</div>
+                    <div class="flex justify-center mt-4">
+                        <div class="flex items-center space-x-2">
+                            <div class="bg-green-500 w-4 h-4 rounded"></div>
+                            <div class="text-sm">Vacant</div>
+                        </div>
+                        <div class="flex items-center space-x-2 ml-4">
+                            <div class="bg-red-500 w-4 h-4 rounded"></div>
+                            <div class="text-sm">Occupied</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Room Status -->
+                <div class="bg-white p-4 rounded-lg shadow-lg">
+                    <h2 class="text-lg font-semibold mb-4">Room status</h2>
+                    <div class="text-red-500 font-bold text-lg mb-4">OCCUPIED</div>
+                    <div class="text-sm mb-2"><strong>Room no.:</strong> R-313</div>
+                    <div class="text-sm mb-2"><strong>Room Type:</strong> Computer Laboratory</div>
+                    <div class="text-sm mb-2"><strong>Occupied by:</strong> BSCPe 4-4</div>
+                    <div class="text-sm mb-2"><strong>Population:</strong> 45</div>
+                    <div class="text-sm mb-2"><strong>Instructor:</strong> Engr. Mah</div>
+                    <div class="text-sm mb-2"><strong>Subject:</strong> CMPE 30224 - CAO</div>
+                    <button class="bg-red-500 text-white py-2 px-4 rounded mt-4">LEAVE ROOM</button>
+                </div>
+                <!-- Room Schedule -->
+                <div class="bg-white p-4 rounded-lg shadow-lg col-span-2">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold">Room Schedule</h2>
+                        <a href="#" class="text-orange-600 text-sm">View all</a>
+                    </div>
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="text-left">
+                                <th class="pb-2">Time</th>
+                                <th class="pb-2">Section</th>
+                                <th class="pb-2">Subject</th>
+                                <th class="pb-2">Instructor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="py-1">7:30 AM - 11:30 AM</td>
+                                <td class="py-1">BSCPe 4-4</td>
+                                <td class="py-1">CMPE 30224 - CAO</td>
+                                <td class="py-1">Engr. Engr. Mah</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1">10:30 AM - 1:30 PM</td>
+                                <td class="py-1">BSCPe 4-4</td>
+                                <td class="py-1">CMPE 30224 - CAO</td>
+                                <td class="py-1">Engr. Mah</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1">2:00 PM - 5:00 PM</td>
+                                <td class="py-1">BSCPe 4-4</td>
+                                <td class="py-1">CMPE 30224 - CAO</td>
+                                <td class="py-1">Engr. Mah</td>
+                            </tr>
+                            <tr>
+                                <td class="py-1">6:00 PM - 8:00 PM</td>
+                                <td class="py-1">BSCPe 4-4</td>
+                                <td class="py-1">CMPE 30224 - CAO</td>
+                                <td class="py-1">Engr. Mah</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- Empty Box -->
+                <div class="bg-white p-4 rounded-lg shadow-lg"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

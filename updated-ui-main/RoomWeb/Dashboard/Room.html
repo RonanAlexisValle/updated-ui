@@ -1,0 +1,160 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rooms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-300 text-gray-800">
+    <div class="flex h-screen">
+
+        <!-- Sidebar -->
+        <div class="fixed h-full bg-orange-600 group transition-all duration-300 w-16 hover:w-64">
+            <div class="flex flex-col h-full">
+                <a href="#" class="flex items-center p-4 border-b border-b-white">
+                    <img src="https://via.placeholder.com/32" alt="placeholder" class="w-8 h-8 rounded object-cover">
+                    <span class="ml-3 text-lg font-poppins text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        Logo
+                    </span>
+                </a>
+                <ul class="flex flex-col mt-4 space-y-2">
+                    <li>
+                        <a href="Main.html" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-home text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Dashboard
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Room.html" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-th-large text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Rooms
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Schedule.htm" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-calendar-alt text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Schedule
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Logs.html" class="flex items-center px-4 py-2 text-white rounded-md hover:bg-orange-500 transition-all duration-300">
+                            <i class="fas fa-file-alt text-2xl"></i>
+                            <span class="ml-3 text-lg font-poppins opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+                                Logs
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 bg-gray-100 ml-16 p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h1 class="text-2xl font-bold text-orange-600">ROOMS</h1>
+                <div class="flex items-center space-x-4">
+                    <i class="fas fa-search text-orange-600 text-xl"></i>
+                    <i class="fas fa-bell text-orange-600 text-xl"></i>
+                </div>
+            </div>
+            <!-- Content -->
+            <div class="flex space-x-6">
+                <!-- Rooms in CPE -->
+                <div class="bg-white shadow-md rounded-lg p-4 w-1/2">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold">Rooms in CPE</h2>
+                        <div class="flex space-x-2">
+                            <i class="fas fa-plus text-green-600 text-xl"></i>
+                            <i class="fas fa-edit text-orange-600 text-xl"></i>
+                            <i class="fas fa-trash text-red-600 text-xl"></i>
+                        </div>
+                    </div>
+                    <ul class="space-y-2">
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 310</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 311</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 312</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 313</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 314</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 315</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                        <li class="flex justify-between items-center p-2 border-b">
+                            <span>ROOM 316</span>
+                            <i class="fas fa-ellipsis-v text-gray-600"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Room Status -->
+                <div class="bg-white shadow-md rounded-lg p-4 w-1/2">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-lg font-semibold">Room status</h2>
+                        <span class="text-red-600 font-semibold">OCCUPIED</span>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Room no.</span>
+                            <span>R-313</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Room Type</span>
+                            <span>Computer Laboratory</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Occupied by</span>
+                            <span>BSCpE 4 - 4</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Population</span>
+                            <span>45</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Instructor</span>
+                            <span>Engr. Mahaguay</span>
+                        </div>
+                        <div class="mt-4">
+                            <h3 class="font-semibold">EQUIPMENT LISTS</h3>
+                            <div class="flex justify-between">
+                                <span>Number of Chairs</span>
+                                <span>50</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Number of Fan</span>
+                                <span>4</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Number of TV</span>
+                                <span>1</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="mt-4 w-full bg-red-600 text-white py-2 rounded-lg">LEAVE ROOM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
