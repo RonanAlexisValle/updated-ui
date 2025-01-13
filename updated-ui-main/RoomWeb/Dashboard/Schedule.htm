@@ -9,7 +9,7 @@
             // Sample data for room schedules
             const roomSchedules = {
                 "ROOM 300": {
-                    type: "Lecture Room",
+                    type: "Computer Engineering Lecture and Multimedia Room",
                     schedule: [
                         {"divider": true},
                         {day: " ", time: "10:30 AM - 1:30 PM", section: "BSCpE 4-3", subject: "CMPE 30224 - Computer Architecture", instructor: "Engr. O.Pajabera" },
@@ -178,7 +178,7 @@
                     ]
                 },
                 "ROOM 315": {
-                    type: "Computer Laboratory",
+                    type: "Computer Architecture and Networking Laboratory",
                     schedule:  [
                     {"divider": true},
                         {day: " ", time: "10:30 AM - 1:30 PM", section: "BSCpE 3-6", subject: "CMPE 304 - Logic Circuits and Design", instructor: "Engr. J. Cansino" },
@@ -366,35 +366,36 @@
                     <!-- Rooms in CPE -->
                     <div class="bg-white shadow-md rounded-lg p-4 w-1/3" style="width: 200px;">
                         <div class="flex justify-between items-center mb-4">
-                            <h2 class="text-lg font-semibold">Rooms in CPE</h2>
+                            <h2 class="text-lg font-bold">Rooms in CPE</h2>
                         </div>
                         <ul>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 300')" class="text-left w-full">ROOM 300</button>
+                                <button onclick="updateSchedule('ROOM 300')" class="text-left w-full hover:bg-gray-100">ROOM 300</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 310')" class="text-left w-full">ROOM 310</button>
+                                <button onclick="updateSchedule('ROOM 310')" class="text-left w-full hover:bg-gray-100">ROOM 310</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 311')" class="text-left w-full">ROOM 311</button>
+                                <button onclick="updateSchedule('ROOM 311')" class="text-left w-full hover:bg-gray-100">ROOM 311</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 312')" class="text-left w-full">ROOM 312</button>
+                                <button onclick="updateSchedule('ROOM 312')" class="text-left w-full hover:bg-gray-100">ROOM 312</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 313')" class="text-left w-full">ROOM 313</button>
+                                <button onclick="updateSchedule('ROOM 313')" class="text-left w-full hover:bg-gray-100">ROOM 313</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 314')" class="text-left w-full">ROOM 314</button>
+                                <button onclick="updateSchedule('ROOM 314')" class="text-left w-full hover:bg-gray-100">ROOM 314</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 315')" class="text-left w-full">ROOM 315</button>
+                                <button onclick="updateSchedule('ROOM 315')" class="text-left w-full hover:bg-gray-100">ROOM 315</button>
                             </li>
                             <li class="flex justify-between items-center py-2 border-b">
-                                <button onclick="updateSchedule('ROOM 316')" class="text-left w-full">ROOM 316</button>
+                                <button onclick="updateSchedule('ROOM 316')" class="text-left w-full hover:bg-gray-100">ROOM 316</button>
                             </li>
                         </ul>
                     </div>
+                    
                     <!-- Room Schedule -->
                     <div id="room-schedule" class="bg-white shadow-md rounded-lg p-4 w-2/3" style="max-height: 600px; width: 1200px; overflow-y: auto;">
                         <!-- Default content -->
